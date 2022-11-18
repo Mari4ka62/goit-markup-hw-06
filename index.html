@@ -382,7 +382,7 @@
           </ul>
         </div>
       </section>
-      <div class="backdrop is-hidden" data-modal>
+      <div class="backdrop" data-modal>
         <div class="modal">
           <button type="button" class="close-button" data-modal-close>
             <svg
@@ -397,6 +397,47 @@
               />
             </svg>
           </button>
+          <form class="modal-form">
+            <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
+            <div class="form-field">
+              <label class="form-label">
+                <span class="label-name">Ім'я</span>
+                <input type="text" name="user-name" class="form-input" />
+              </label>
+            </div>
+            <div class="form-field">
+              <label class="form-label">
+                <span class="label-name">Телефон</span>
+                <input type="tel" name="user-phone" class="form-input" />
+              </label>
+            </div>
+            <div class="form-field">
+              <label class="form-label">
+                <span class="label-name">Пошта</span>
+                <input type="email" name="user-mail" class="form-input" />
+              </label>
+            </div>
+            <label class="form-label">
+              <span class="label-name">Коментар</span>
+              <textarea
+                name="comment"
+                class="comment-area"
+                rows="8"
+                placeholder="Введіть текст"
+              ></textarea>
+            </label>
+
+            <label class="checkbox-text">
+              <input type="checkbox" name="check" />
+              <span
+                >Погоджуюся з розсилкою та приймаю
+                <a href="" class="conditions-link link">Умови договору</a>
+              </span>
+            </label>
+            <button type="submit" class="button modal-button">
+              Відправити
+            </button>
+          </form>
         </div>
       </div>
     </main>
