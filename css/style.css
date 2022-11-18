@@ -644,6 +644,7 @@ img{
 .checkbox-label{
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .checkbox-modal{
     appearance: none;
