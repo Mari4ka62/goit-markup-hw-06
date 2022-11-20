@@ -30,7 +30,6 @@ p{
 img{ 
     display: block;
     max-width: 100%;
-
 }
 /* Хедер */
 .page-header{
@@ -56,6 +55,7 @@ img{
 .list{
     padding: 0;
     margin: 0;
+
     list-style: none;
 }
 /* Навігація */
@@ -123,7 +123,6 @@ img{
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
-
 
     transition-property: color;
     transition-duration: var(--transition-time);
@@ -432,7 +431,7 @@ img{
     margin-top: -30px;
     padding-left: 0; 
 }
-.work-list >.item{
+.work-list > .item{
     flex-basis: calc(100%/3 - var(--main-distance-element));
     margin-left: var(--main-distance-element);
     margin-top: var(--main-distance-element);
@@ -460,6 +459,9 @@ img{
     display: inline-block;
     text-decoration: none;
 
+    transition-property: box-shadow;
+    transition-duration: var(--transition-time);
+    transition-timing-function: var(--timing-function);
 }
 .work-list .link:hover {
     box-shadow:
@@ -522,12 +524,12 @@ img{
 }
 .backdrop.is-hidden .modal{
     transform: translate(-50%, -50%) scale(1.5);
-
 }
 .modal{
     position: absolute;
     top: 50%;
     left: 50%;
+    padding: 40px;
 
     transform: translate(-50%, -50%) scale(1);
     transition-property: transform;
@@ -542,9 +544,6 @@ img{
     border-radius: 4px;
 }
 /* Форма модального вікна */
-.modal-form{
-    padding: 40px;
-}
 .modal-title{
     margin-bottom: 12px;
 
@@ -565,6 +564,7 @@ img{
 }
 .form-label{
     position: relative;
+
     display: flex;
     flex-direction: column;
 
@@ -574,6 +574,7 @@ img{
     padding-top: 11px;
     padding-left: 42px;
     padding-bottom: 11px;
+    
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 
@@ -590,6 +591,7 @@ img{
 }
 .form-label .icon{
     fill: var(--title-text-color);
+    
     position: absolute;
     top:50%;
     left: 15px;
@@ -608,6 +610,14 @@ img{
     line-height: 1.5;
     letter-spacing: 0.06em;
     color: var(--main-background-color);
+
+    transition-property: background-color;
+    transition-duration: var(--transition-time);
+    transition-timing-function: var(--timing-function);
+}
+.modal-button:hover,
+.modal-button:focus{
+    background-color: #188CE8;
 }
 .comment-area{
     margin-bottom: 10px;
@@ -626,20 +636,21 @@ img{
     border-color: #2196F3;
 }
 .comment-area::placeholder{
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 1.16;
-        letter-spacing: 0.01em;
-        color: rgba(117, 117, 117, 0.5);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
 }
 .checkbox-label{
     display:block;
     margin-bottom: var(--main-distance-element);
+    
     text-align: center;
 }
 .conditions-link{
-        text-decoration-line: underline;
-        color: #2196F3;
+    text-decoration-line: underline;
+    color: #2196F3;
 }
 .checkbox-label{
     display: flex;
@@ -774,9 +785,10 @@ img{
 }
 /* Форма підписки */
 .footer-form{
-    margin-left: 93px;
+    margin-left: auto;
 }
 .footer-form .label-text{
+    display: block;
     margin-top: 23px;
     margin-bottom: 20px;
 
@@ -815,6 +827,7 @@ img{
     line-height: 1.25;
     color: rgba(255, 255, 255, 0.6);
 }
+/* Кнопка підписки */
 .sign-button{
     display: inline-flex;
     align-items: center;
@@ -835,8 +848,7 @@ img{
     
     background: var(--accent-color);
     box-shadow:
-    0px 4px 4px rgba(0, 0, 0, 0.15);
-    
+    0px 4px 4px rgba(0, 0, 0, 0.15);  
 }
 .sign-button::after{
     content: "";
@@ -847,7 +859,7 @@ img{
     background-image: url(../images/telegram.svg);
 }
 
-/* Кнопка підписки */
+
 
 /* Visually-hidden title */
 .visually-hidden{
